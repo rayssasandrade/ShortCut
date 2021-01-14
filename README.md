@@ -1,22 +1,46 @@
 
 # Nome
 
-## < Nome do sistema >
+## < Sistema Gerenciador de Disciplinas para Discentes (Shortcut) >
 
 ### RESUMO/JUSTIFICATIVA
 
-Todo ano é preciso descrever as características de um sistema que será construído pelos alunos. O presente repositório busca organizar as ideias e definir um padrão/template de documentação de sistemas que seja simples e colaborativo.
-
+  Ao reprovar em disciplinas, estar em uma grande divergente da atual ou mesmo questões pessoais não conseguir matricular-se em disciplinas correspondentes a seu período letivo, infelizmente por não ser regular na grade vigente acabam tendo grande dificuldade em qual disciplina escolher e qual terá mais benefício pegando o quanto antes, fazendo escolhas não tão felizes e passando mais tempo para cursar todas as disciplinas, além de incertezas e estresse. 
+  
 ### OBJETIVOS
 
-- Definir um template de avaliação para ser utilizado na disciplina de web 2
+  Com o desenvolvimento do sistema Sistemas Gerenciador de disciplinas para discentes (Shortcut), os discentes poderão se matricular com maior certeza nas disciplinas, já que o aplicativo gerou as disciplinas mais adequadas para o aluno cursar no momento. O sistema decide baseado nos pré requisitos de cada disciplina, na grade curricular do curso no semestre, nas restrições do aluno e quais ele já realizou.
 
 ## FUNCIONALIDADES
 
-- [ ] Apresentar os requisitos funcionais
+- [x] Apresentar os requisitos funcionais
 - [x] Apresentar os requisitos não-funcionais
-- [ ] Indicar os membros da equipe
+- [x] Indicar os membros da equipe
 - [x] Exibir repositório e dicas que são comuns
+
+### REQUISITOS FUNCIONAIS
+
+- Perfis de usuário
+- Cadastro de usuário
+- Cadastro de Instituição
+- Cadastro de curso
+- Cadastro de disciplina
+- Importação de disciplinas
+- Cadastro de turma
+- Importação de turmas ofertadas
+- Listagem de turmas ofertadas 
+- Cadastro de período letivo
+- Cadstro de período curricular
+- Cadastro de restrições
+- Cadastro de disciplinas cursadas
+- Listagem de disciplinas cursadas
+- Geração de Horário
+- Apresentação de tempo de permanência experado no curso
+- Apresentação de disciplinas alternativas
+- Geração de pdf de horários 
+- Geração de alternativas de horários
+- Listagem de usuário por tempo mínimo de permanência
+- Contagem de usuários por determinada disciplinas
 
 ### REQUISITOS NÃO FUNCIONAIS
 
@@ -29,9 +53,9 @@ Todo ano é preciso descrever as características de um sistema que será constr
 
 ## Membros da equipe (Até 3 pessoas. Identificar o líder)
 
-- Aluno 1 (líder)
-- Aluno 2
-- Aluno 3
+- Rayssa Silva Andrade (líder)
+- Eduardo Andrade Santana 
+- Diogenes Araujo de Oliveira Junior
 
 ## Dicas, repositórios e materiais úteis
 
