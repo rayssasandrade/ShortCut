@@ -27,15 +27,18 @@
 - Cadastro de disciplina
 - Importação de disciplinas
 - Cadastro de turma
-- Importação de turmas ofertadas
-- Listagem de turmas ofertadas 
 - Cadastro de período letivo
 - Cadstro de período curricular
 - Cadastro de restrições
 - Cadastro de disciplinas cursadas
 - Listagem de disciplinas cursadas
-- Geração de Horário
 - Apresentação de tempo de permanência experado no curso
+
+### REQUISITOS FUNCIONAIS FUTUROS
+
+- Importação de turmas ofertadas
+- Listagem de turmas ofertadas 
+- Geração de Horário
 - Apresentação de disciplinas alternativas
 - Geração de pdf de horários 
 - Geração de alternativas de horários
