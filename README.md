@@ -60,6 +60,10 @@
 - Eduardo Andrade Santana 
 - Diogenes Araujo de Oliveira Junior
 
+## DER
+
+<img alt="DER" src="https://i.postimg.cc/FKbKryRF/der.png"/>
+
 ## Dicas, repositórios e materiais úteis
 
 - https://github.com/CBSIIFSLagarto/2021_1_web2
