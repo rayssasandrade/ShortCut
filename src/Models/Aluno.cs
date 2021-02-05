@@ -15,8 +15,12 @@ namespace SisGerenciador.Models
         [Required(ErrorMessage = "CPF é obrigatório", AllowEmptyStrings = false)]
         public string CPF { get; set; }
 
+        [Display(Name = "Nome")]
+        [Required(ErrorMessage = "Nome é obrigatório", AllowEmptyStrings = false)]
         public string Nome { get; set; }
 
+        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Email é obrigatório", AllowEmptyStrings = false)]
         public string Email { get; set; }
 
         public string Telefone { get; set; }
