@@ -11,6 +11,8 @@ namespace SisGerenciador.Models
         [Key]
         public int Id { get; set; }
 
+        [Display(Name = "CPF")]
+        [Required(ErrorMessage = "CPF é obrigatório", AllowEmptyStrings = false)]
         public string CPF { get; set; }
 
         public string Nome { get; set; }
