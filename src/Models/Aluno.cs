@@ -37,7 +37,7 @@ namespace SisGerenciador.src.Models
 
         [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         [Required(ErrorMessage = "Data de nascimento é obrigatória")]
         public DateTime DtNasc { get; set; }
 
@@ -47,7 +47,7 @@ namespace SisGerenciador.src.Models
 
         [Display(Name = "Data de Matricula")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         [Required(ErrorMessage = "Data de matricula é obrigatória")]
         public DateTime DtMatricula { get; set; }
 

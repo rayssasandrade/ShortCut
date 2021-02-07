@@ -35,7 +35,7 @@ namespace SisGerenciador.src.Models
 
         [Display(Name = "Data de Matricula")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DtMatricula { get; set; }
 
         public Instituicao Instituicao { get; set; }
