@@ -6,14 +6,13 @@ using System.Linq;
 
 namespace SisGerenciador.src.Models
 {
-    public class Aluno
+    public class Docente
     {
         [Key]
         public int Id { get; set; }
 
         [Display(Name = "CPF")]
         [StringLength(11)]
-        [Required(ErrorMessage = "CPF é obrigatório", AllowEmptyStrings = false)]
         public string CPF { get; set; }
 
         [Display(Name = "Nome")]
@@ -26,20 +25,9 @@ namespace SisGerenciador.src.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Display(Name = "Telefone")]
-        [StringLength(15)]
-        [DataType(DataType.PhoneNumber)]
-        public string Telefone { get; set; }
-
         [Display(Name = "Endereço")]
         [StringLength(500)]
         public string Endereco { get; set; }
-
-        [Display(Name = "Data de Nascimento")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
-        [Required(ErrorMessage = "Data de nascimento é obrigatória")]
-        public DateTime DtNasc { get; set; }
 
         [Display(Name = "Matricula")]
         [Required(ErrorMessage = "Matricula é obrigatória")]
@@ -48,15 +36,12 @@ namespace SisGerenciador.src.Models
         [Display(Name = "Data de Matricula")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
-        [Required(ErrorMessage = "Data de matricula é obrigatória")]
         public DateTime DtMatricula { get; set; }
 
         public Instituicao Instituicao { get; set; }
         public int InstituicaoId { get; set; }
 
-        public virtual ICollection<SugestaoMatriculaTurma> SugestaoMatriculaTurmas { get; set; }
         public virtual ICollection<MatriculaTurma> MatriculaTurmas { get; set; }
-        public virtual ICollection<Restricao> Restricoes { get; set; }
 
     }
 }
