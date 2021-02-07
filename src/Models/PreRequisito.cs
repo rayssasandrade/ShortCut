@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace SisGerenciador.src.Models
 {
-    public class PreRequisitos
+    public class PreRequisito
     {
         [Key]
         public int Id { get; set; }
@@ -14,7 +14,7 @@ namespace SisGerenciador.src.Models
         public Disciplina Disciplina { get; set; }
         public int DisciplinaId { get; set; }
 
-        public Disciplina? PreRequisito { get; set; }
+        public Disciplina? DisciplinaRequeridas { get; set; }
         public int PreRequisitoId { get; set; }
     }
 }

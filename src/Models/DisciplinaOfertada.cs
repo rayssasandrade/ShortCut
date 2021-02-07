@@ -8,6 +8,7 @@ namespace SisGerenciador.src.Models
 {
     public class DisciplinaOfertada
     {
+        
         [Key]
         public int Id { get; set; }
 
