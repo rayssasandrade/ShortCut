@@ -11,8 +11,8 @@ namespace SisGerenciador.src.Models
         [Key]
         public int Id { get; set; }
 
-        public HoraAula HoraAula { get; set; }
-        public int HoraAulaId { get; set; }
+        public Horario Horario { get; set; }
+        public int HorarioId { get; set; }
 
         public Turma Turma { get; set; }
         public int TurmaId { get; set; }

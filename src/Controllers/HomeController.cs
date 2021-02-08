@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SisGerenciador.Models;
+using SisGerenciador.src.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SisGerenciador.Controllers
+namespace SisGerenciador.src.Controllers
 {
     public class HomeController : Controller
     {

@@ -19,7 +19,11 @@ namespace SisGerenciador.src.Models
         [Display(Name = "Crédito")]
         public int Credito { get; set; }
 
-        public virtual ICollection<PreRequisito> PreRequisitos { get; set; }
+        public virtual ICollection<DisciplinaOfertada> DisciplinaOfertadas { get; set; }
+        
+        public virtual ICollection<GradeCurricular> GradeCurriculares { get; set; }
 
+        public virtual ICollection<PreRequisito> PreRequisitos { get; set; }
+        public virtual ICollection<PreRequisito> DisciplinasRequeridas { get; set; }
     }
 }
