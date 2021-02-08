@@ -8,8 +8,8 @@ namespace SisGerenciador.src.Models
 {
     public class MatriculaTurma
     {
-        [Key]
-        public int Id { get; set; }
+        //[Key]
+        //public int Id { get; set; }
 
         [Display(Name = "Status")]
         [Required(ErrorMessage = "Status é obrigatório")]

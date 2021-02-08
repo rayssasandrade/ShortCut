@@ -9,8 +9,8 @@ namespace SisGerenciador.src.Models
     public class DisciplinaOfertada
     {
         
-        [Key]
-        public int Id { get; set; }
+        //[Key]
+        //public int Id { get; set; }
 
         public Disciplina Disciplina { get; set; }
         public int DisciplinaId { get; set; }

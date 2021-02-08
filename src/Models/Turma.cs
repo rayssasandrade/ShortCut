@@ -14,6 +14,12 @@ namespace SisGerenciador.src.Models
         public DisciplinaOfertada DisciplinaOfertada { get; set; }
         public int DisciplinaOfertadaId { get; set; }
 
+        //public DisciplinaOfertada Disciplina { get; set; }
+        //public int DisciplinaId { get; set; }
+
+        //public DisciplinaOfertada PeriodoLetivo { get; set; }
+        //public int PeriodoLetivoId { get; set; }
+
         public Docente Docente { get; set; }
         public int DocenteId { get; set; }
 

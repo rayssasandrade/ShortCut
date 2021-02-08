@@ -149,7 +149,7 @@ namespace SisGerenciador.src.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;User ID=ITSOLVED;Initial Catalog=HeroApp;Data Source=LAPTOP-DP2K66C3\\SQLEXPRESS");
+            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;User ID=ITSOLVED;Initial Catalog=Shortcut;Data Source=LAPTOP-DP2K66C3\\SQLEXPRESS");
         }
     }
 }
