@@ -23,6 +23,7 @@ namespace SisGerenciador.src.Models
         
         public virtual ICollection<GradeCurricular> GradeCurriculares { get; set; }
 
+        public virtual ICollection<MatriculaTurma> MatriculaDisciplinas { get; set; }
         //public virtual ICollection<PreRequisito> PreRequisitos { get; set; }
         //public virtual ICollection<PreRequisito> DisciplinasRequeridas { get; set; }
     }

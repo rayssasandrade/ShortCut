@@ -8,8 +8,8 @@ namespace SisGerenciador.src.Models
 {
     public class MatriculaTurma
     {
-        //[Key]
-        //public int Id { get; set; }
+        [Key]
+        public int Id { get; set; }
 
         [Display(Name = "Status")]
         [Required(ErrorMessage = "Status é obrigatório")]
@@ -18,8 +18,8 @@ namespace SisGerenciador.src.Models
         public Aluno Aluno { get; set; }
         public int AlunoId { get; set; }
 
-        public Turma Turma { get; set; }
-        public int TurmaId { get; set; }
+        public Disciplina Disciplina { get; set; }
+        public int DisciplinaId { get; set; }
 
     }
 }

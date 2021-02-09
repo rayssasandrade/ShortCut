@@ -23,8 +23,7 @@ namespace SisGerenciador.src.Models
         public Docente Docente { get; set; }
         public int DocenteId { get; set; }
 
-        public virtual ICollection<MatriculaTurma> MatriculasTurmas { get; set; }
-        public virtual ICollection<SugestaoMatricula> SugestaoMatriculas { get; set; }
+        //public virtual ICollection<SugestaoMatricula> SugestaoMatriculas { get; set; }
         public virtual ICollection<TurmaHorario> TurmaHorarios { get; set; }
 
     }

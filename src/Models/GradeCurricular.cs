@@ -8,8 +8,8 @@ namespace SisGerenciador.src.Models
 {
     public class GradeCurricular
     {
-        //[Key]
-        //public int Id { get; set; }
+        [Key]
+        public int Id { get; set; }
 
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "Descrição é obrigatória", AllowEmptyStrings = false)]
