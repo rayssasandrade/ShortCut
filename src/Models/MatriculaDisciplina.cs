@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace SisGerenciador.src.Models
 {
-    public class MatriculaTurma
+    public class MatriculaDisciplina
     {
         [Key]
         public int Id { get; set; }

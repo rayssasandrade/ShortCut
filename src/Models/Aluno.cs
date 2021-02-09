@@ -55,7 +55,7 @@ namespace SisGerenciador.src.Models
         public int InstituicaoId { get; set; }
 
         //public virtual ICollection<SugestaoMatricula> SugestaoMatriculas { get; set; }
-        public virtual ICollection<MatriculaTurma> MatriculaTurmas { get; set; }
+        public virtual ICollection<MatriculaDisciplina> MatriculaDisciplinas { get; set; }
         public virtual ICollection<Restricao> Restricoes { get; set; }
 
     }

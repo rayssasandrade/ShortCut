@@ -15,7 +15,7 @@ namespace SisGerenciador.src.Data
         public DbSet<HoraAula> HoraAulas { get; set; }
         public DbSet<Horario> Horarios { get; set; }
         public DbSet<Instituicao> Instituicoes { get; set; }
-        public DbSet<MatriculaTurma> MatriculaTurmas { get; set; }
+        public DbSet<MatriculaDisciplina> MatriculaTurmas { get; set; }
         public DbSet<PeriodoCurricular> PeriodoCurriculares { get; set; }
         public DbSet<PeriodoLetivo> PeriodoLetivos { get; set; }
         //public DbSet<PreRequisito> PreRequisitos { get; set; }
@@ -116,16 +116,16 @@ namespace SisGerenciador.src.Data
                 .WithMany(p => p.Restricoes)
                 .HasForeignKey(pa => pa.AlunoId);
 
-            /*Relações muitos para muitos - MatriculaTurma*/
-            modelBuilder.Entity<MatriculaTurma>()
+            /*Relações muitos para muitos - MatriculaDisciplina*/
+            modelBuilder.Entity<MatriculaDisciplina>()
                .HasKey(a => new { a.Id });
 
-            modelBuilder.Entity<MatriculaTurma>()
+            modelBuilder.Entity<MatriculaDisciplina>()
                 .HasOne(pa => pa.Aluno)
-                .WithMany(p => p.MatriculaTurmas)
+                .WithMany(p => p.MatriculaDisciplinas)
                 .HasForeignKey(pa => pa.AlunoId);
 
-            modelBuilder.Entity<MatriculaTurma>()
+            modelBuilder.Entity<MatriculaDisciplina>()
                 .HasOne(pa => pa.Disciplina)
                 .WithMany(p => p.MatriculaDisciplinas)
                 .HasForeignKey(pa => pa.DisciplinaId);
