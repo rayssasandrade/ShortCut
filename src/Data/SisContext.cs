@@ -65,14 +65,17 @@ namespace SisGerenciador.src.Data
                 .HasKey(m => new { m.Id });
 
             modelBuilder.Entity<PreRequisito>()
-                .HasOne(im => im.DisciplinaRequerida)
-                .WithMany(i => i.PreRequisitos)
-                .HasForeignKey(im => im.DisciplinaRequeridaId);
+                .HasOne(im => im.Liberada)
+                .WithMany(i => i.Liberadas)
+                .HasForeignKey(im => im.LiberadaId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            //modelBuilder.Entity<PreRequisito>()
-            //    .HasOne(im => im.Disciplina)
-            //    .WithMany(i => i.DisciplinasRequeridas)
-            //    .HasForeignKey(im => im.DisciplinaRequeridasId);
+            modelBuilder.Entity<PreRequisito>()
+                .HasOne(im => im.Liberadora)
+                .WithMany(i => i.Liberadoras)
+                .HasForeignKey(im => im.LiberadoraId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             /*Relações muitos para muitos - Turma*/
             modelBuilder.Entity<Turma>()
