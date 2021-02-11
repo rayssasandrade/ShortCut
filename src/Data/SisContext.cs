@@ -18,7 +18,7 @@ namespace SisGerenciador.src.Data
         public DbSet<MatriculaDisciplina> MatriculaTurmas { get; set; }
         public DbSet<PeriodoCurricular> PeriodoCurriculares { get; set; }
         public DbSet<PeriodoLetivo> PeriodoLetivos { get; set; }
-        //public DbSet<PreRequisito> PreRequisitos { get; set; }
+        public DbSet<PreRequisito> PreRequisitos { get; set; }
         public DbSet<Restricao> Restricoes { get; set; }
         //public DbSet<SugestaoMatricula> SugestaoMatriculas { get; set; }
         public DbSet<Turma> Turmas { get; set; }
@@ -60,19 +60,19 @@ namespace SisGerenciador.src.Data
                 .WithMany(t => t.DisciplinasOfertadas)
                 .HasForeignKey(at => at.PeriodoLetivoId);
 
-        //    /*Relações muitos para muitos - PreRequisitos*/
-        //    modelBuilder.Entity<PreRequisito>()
-        //        .HasKey(m => new { m.DisciplinaId});
+            /*Relações muitos para muitos - PreRequisitos*/
+            modelBuilder.Entity<PreRequisito>()
+                .HasKey(m => new { m.Id });
 
-        //    modelBuilder.Entity<PreRequisito>()
-        //        .HasOne(im => im.Disciplina)
-        //        .WithMany(i => i.PreRequisitos)
-        //        .HasForeignKey(im => im.DisciplinaId);
+            modelBuilder.Entity<PreRequisito>()
+                .HasOne(im => im.DisciplinaRequerida)
+                .WithMany(i => i.PreRequisitos)
+                .HasForeignKey(im => im.DisciplinaRequeridaId);
 
-        //    //modelBuilder.Entity<PreRequisito>()
-        //    //    .HasOne(im => im.Disciplina)
-        //    //    .WithMany(i => i.DisciplinasRequeridas)
-        //    //    .HasForeignKey(im => im.DisciplinaRequeridasId);
+            //modelBuilder.Entity<PreRequisito>()
+            //    .HasOne(im => im.Disciplina)
+            //    .WithMany(i => i.DisciplinasRequeridas)
+            //    .HasForeignKey(im => im.DisciplinaRequeridasId);
 
             /*Relações muitos para muitos - Turma*/
             modelBuilder.Entity<Turma>()
