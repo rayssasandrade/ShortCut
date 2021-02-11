@@ -6,6 +6,8 @@ namespace SisGerenciador.src.Data
     public class MeuContexto : DbContext
     {
         public DbSet<Aluno> Alunos { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Disciplina> Disciplinas { get; set; }
