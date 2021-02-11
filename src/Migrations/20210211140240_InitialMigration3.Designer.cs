@@ -10,8 +10,8 @@ using SisGerenciador.src.Data;
 namespace SisGerenciador.Migrations
 {
     [DbContext(typeof(MeuContexto))]
-    [Migration("20210209005523_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210211140240_InitialMigration3")]
+    partial class InitialMigration3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -374,6 +374,28 @@ namespace SisGerenciador.Migrations
                     b.ToTable("PeriodoLetivos");
                 });
 
+            modelBuilder.Entity("SisGerenciador.src.Models.PreRequisito", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("LiberadaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LiberadoraId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LiberadaId");
+
+                    b.HasIndex("LiberadoraId");
+
+                    b.ToTable("PreRequisitos");
+                });
+
             modelBuilder.Entity("SisGerenciador.src.Models.Restricao", b =>
                 {
                     b.Property<int>("Id")
@@ -557,6 +579,25 @@ namespace SisGerenciador.Migrations
                     b.Navigation("Disciplina");
                 });
 
+            modelBuilder.Entity("SisGerenciador.src.Models.PreRequisito", b =>
+                {
+                    b.HasOne("SisGerenciador.src.Models.Disciplina", "Liberada")
+                        .WithMany("Liberadas")
+                        .HasForeignKey("LiberadaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SisGerenciador.src.Models.Disciplina", "Liberadora")
+                        .WithMany("Liberadoras")
+                        .HasForeignKey("LiberadoraId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Liberada");
+
+                    b.Navigation("Liberadora");
+                });
+
             modelBuilder.Entity("SisGerenciador.src.Models.Restricao", b =>
                 {
                     b.HasOne("SisGerenciador.src.Models.Aluno", "Aluno")
@@ -636,6 +677,10 @@ namespace SisGerenciador.Migrations
                     b.Navigation("DisciplinaOfertadas");
 
                     b.Navigation("GradeCurriculares");
+
+                    b.Navigation("Liberadas");
+
+                    b.Navigation("Liberadoras");
 
                     b.Navigation("MatriculaDisciplinas");
                 });

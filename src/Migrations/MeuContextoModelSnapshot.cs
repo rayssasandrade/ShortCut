@@ -379,12 +379,17 @@ namespace SisGerenciador.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("DisciplinaRequeridaId")
+                    b.Property<int>("LiberadaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LiberadoraId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DisciplinaRequeridaId");
+                    b.HasIndex("LiberadaId");
+
+                    b.HasIndex("LiberadoraId");
 
                     b.ToTable("PreRequisitos");
                 });
@@ -453,6 +458,62 @@ namespace SisGerenciador.Migrations
                     b.HasIndex("TurmaId");
 
                     b.ToTable("TurmaHorarios");
+                });
+
+            modelBuilder.Entity("SisGerenciador.src.Models.Usuario", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.Aluno", b =>
@@ -574,13 +635,21 @@ namespace SisGerenciador.Migrations
 
             modelBuilder.Entity("SisGerenciador.src.Models.PreRequisito", b =>
                 {
-                    b.HasOne("SisGerenciador.src.Models.Disciplina", "DisciplinaRequerida")
-                        .WithMany("PreRequisitos")
-                        .HasForeignKey("DisciplinaRequeridaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("SisGerenciador.src.Models.Disciplina", "Liberada")
+                        .WithMany("Liberadas")
+                        .HasForeignKey("LiberadaId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("DisciplinaRequerida");
+                    b.HasOne("SisGerenciador.src.Models.Disciplina", "Liberadora")
+                        .WithMany("Liberadoras")
+                        .HasForeignKey("LiberadoraId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Liberada");
+
+                    b.Navigation("Liberadora");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.Restricao", b =>
@@ -663,9 +732,11 @@ namespace SisGerenciador.Migrations
 
                     b.Navigation("GradeCurriculares");
 
-                    b.Navigation("MatriculaDisciplinas");
+                    b.Navigation("Liberadas");
 
-                    b.Navigation("PreRequisitos");
+                    b.Navigation("Liberadoras");
+
+                    b.Navigation("MatriculaDisciplinas");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.DisciplinaOfertada", b =>

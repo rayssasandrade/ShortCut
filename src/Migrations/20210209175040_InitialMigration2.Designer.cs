@@ -10,8 +10,8 @@ using SisGerenciador.src.Data;
 namespace SisGerenciador.Migrations
 {
     [DbContext(typeof(MeuContexto))]
-    [Migration("20210209005523_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210209175040_InitialMigration2")]
+    partial class InitialMigration2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
