@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SisGerenciador.src.Data;
 
 namespace SisGerenciador.Migrations
 {
     [DbContext(typeof(MeuContexto))]
-    partial class MeuContextoModelSnapshot : ModelSnapshot
+    [Migration("20210209175040_InitialMigration2")]
+    partial class InitialMigration2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -372,28 +374,6 @@ namespace SisGerenciador.Migrations
                     b.ToTable("PeriodoLetivos");
                 });
 
-            modelBuilder.Entity("SisGerenciador.src.Models.PreRequisito", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int>("LiberadaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LiberadoraId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("LiberadaId");
-
-                    b.HasIndex("LiberadoraId");
-
-                    b.ToTable("PreRequisitos");
-                });
-
             modelBuilder.Entity("SisGerenciador.src.Models.Restricao", b =>
                 {
                     b.Property<int>("Id")
@@ -577,25 +557,6 @@ namespace SisGerenciador.Migrations
                     b.Navigation("Disciplina");
                 });
 
-            modelBuilder.Entity("SisGerenciador.src.Models.PreRequisito", b =>
-                {
-                    b.HasOne("SisGerenciador.src.Models.Disciplina", "Liberada")
-                        .WithMany("Liberadas")
-                        .HasForeignKey("LiberadaId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("SisGerenciador.src.Models.Disciplina", "Liberadora")
-                        .WithMany("Liberadoras")
-                        .HasForeignKey("LiberadoraId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Liberada");
-
-                    b.Navigation("Liberadora");
-                });
-
             modelBuilder.Entity("SisGerenciador.src.Models.Restricao", b =>
                 {
                     b.HasOne("SisGerenciador.src.Models.Aluno", "Aluno")
@@ -675,10 +636,6 @@ namespace SisGerenciador.Migrations
                     b.Navigation("DisciplinaOfertadas");
 
                     b.Navigation("GradeCurriculares");
-
-                    b.Navigation("Liberadas");
-
-                    b.Navigation("Liberadoras");
 
                     b.Navigation("MatriculaDisciplinas");
                 });
