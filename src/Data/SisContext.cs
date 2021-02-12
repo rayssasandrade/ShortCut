@@ -71,6 +71,8 @@ namespace SisGerenciador.src.Data
                 .WithMany(i => i.Liberadas)
                 .HasForeignKey(im => im.LiberadaId)
                 .OnDelete(DeleteBehavior.Restrict);
+                
+
 
             modelBuilder.Entity<PreRequisito>()
                 .HasOne(im => im.Liberadora)
