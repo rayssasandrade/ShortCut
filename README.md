@@ -62,7 +62,7 @@
 
 ## DER
 
-<img alt="DER" src="https://i.postimg.cc/d3ZnV3yp/der.png"/>
+<img alt="DER" src="https://i.postimg.cc/YjKRh6Ld/der.jpg"/>
 
 ## Dicas, repositórios e materiais úteis
 
