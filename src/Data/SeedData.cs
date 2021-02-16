@@ -4,10 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using SisGerenciador.src.Data;
 using SisGerenciador.src.Models;
 
-namespace SisGerenciador.Models
+namespace SisGerenciador.src.Data
 {
     public class SeedData
     {
@@ -27,6 +26,17 @@ namespace SisGerenciador.Models
                     };
 
                     context.Departamentos.AddRange(departamentos);
+                    context.SaveChanges();
+                }
+                if (!context.Instituicoes.Any())
+                {
+                    var instituicoes = new List<Instituicao>
+                    {
+                        new Instituicao { Sigla = "IFS", Descricao = "Instituto Federal de Ciência e Tecnologia de Sergipe1"},
+                        new Instituicao { Sigla = "UFS", Descricao = "Universidade Federal de Sergipe"}
+                    };
+
+                    context.Instituicoes.AddRange(instituicoes);
                     context.SaveChanges();
                 }
             }
