@@ -10,7 +10,7 @@ using SisGerenciador.src.Data;
 namespace SisGerenciador.Migrations
 {
     [DbContext(typeof(MeuContexto))]
-    [Migration("20210215233141_InitialMigration")]
+    [Migration("20210216180800_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -333,7 +333,7 @@ namespace SisGerenciador.Migrations
 
                     b.HasIndex("DisciplinaId");
 
-                    b.ToTable("MatriculaTurmas");
+                    b.ToTable("MatriculaDisciplinas");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.PeriodoCurricular", b =>

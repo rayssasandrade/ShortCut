@@ -1,12 +1,16 @@
 using SisGerenciador.src.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace SisGerenciador.src.Data
 {
     public class MeuContexto : DbContext
     {
-        public DbSet<Aluno> Alunos { get; set; }
+        public MeuContexto(DbContextOptions<MeuContexto> options) : base(options)
+        {
+        }
 
+        public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Departamento> Departamentos { get; set; }
@@ -17,7 +21,7 @@ namespace SisGerenciador.src.Data
         public DbSet<HoraAula> HoraAulas { get; set; }
         public DbSet<Horario> Horarios { get; set; }
         public DbSet<Instituicao> Instituicoes { get; set; }
-        public DbSet<MatriculaDisciplina> MatriculaTurmas { get; set; }
+        public DbSet<MatriculaDisciplina> MatriculaDisciplinas { get; set; }
         public DbSet<PeriodoCurricular> PeriodoCurriculares { get; set; }
         public DbSet<PeriodoLetivo> PeriodoLetivos { get; set; }
         public DbSet<PreRequisito> PreRequisitos { get; set; }
@@ -28,7 +32,6 @@ namespace SisGerenciador.src.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             /*Relações muitos para muitos - Grade Curricular*/
             modelBuilder.Entity<GradeCurricular>()
                 .HasKey(m => new { m.Id });
@@ -50,7 +53,7 @@ namespace SisGerenciador.src.Data
 
             /*Relações muitos para muitos - DisciplinaOfertadas*/
             modelBuilder.Entity<DisciplinaOfertada>()
-                .HasKey(t => new { t.Id});
+                .HasKey(t => new { t.Id });
 
             modelBuilder.Entity<DisciplinaOfertada>()
                 .HasOne(at => at.Disciplina)
@@ -71,7 +74,7 @@ namespace SisGerenciador.src.Data
                 .WithMany(i => i.Liberadas)
                 .HasForeignKey(im => im.LiberadaId)
                 .OnDelete(DeleteBehavior.Restrict);
-                
+
 
 
             modelBuilder.Entity<PreRequisito>()
@@ -156,7 +159,8 @@ namespace SisGerenciador.src.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;User ID=ITSOLVED;Initial Catalog=Shortcut;Data Source=LAPTOP-DP2K66C3\\SQLEXPRESS");
+            //optionsBuilder.UseSqlServer(Configuration.GetConnectionString("MeuContexto"));
+            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;Password=P@ss;User ID =sa;Initial Catalog=Shortcut;Data Source=DESKTOP-ADA6836\\SQLEXPRESS");
         }
     }
 }

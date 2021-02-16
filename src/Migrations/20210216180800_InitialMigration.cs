@@ -274,7 +274,7 @@ namespace SisGerenciador.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MatriculaTurmas",
+                name: "MatriculaDisciplinas",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -285,15 +285,15 @@ namespace SisGerenciador.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MatriculaTurmas", x => x.Id);
+                    table.PrimaryKey("PK_MatriculaDisciplinas", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MatriculaTurmas_Alunos_AlunoId",
+                        name: "FK_MatriculaDisciplinas_Alunos_AlunoId",
                         column: x => x.AlunoId,
                         principalTable: "Alunos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MatriculaTurmas_Disciplinas_DisciplinaId",
+                        name: "FK_MatriculaDisciplinas_Disciplinas_DisciplinaId",
                         column: x => x.DisciplinaId,
                         principalTable: "Disciplinas",
                         principalColumn: "Id",
@@ -463,13 +463,13 @@ namespace SisGerenciador.Migrations
                 column: "HoraAulaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MatriculaTurmas_AlunoId",
-                table: "MatriculaTurmas",
+                name: "IX_MatriculaDisciplinas_AlunoId",
+                table: "MatriculaDisciplinas",
                 column: "AlunoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MatriculaTurmas_DisciplinaId",
-                table: "MatriculaTurmas",
+                name: "IX_MatriculaDisciplinas_DisciplinaId",
+                table: "MatriculaDisciplinas",
                 column: "DisciplinaId");
 
             migrationBuilder.CreateIndex(
@@ -519,7 +519,7 @@ namespace SisGerenciador.Migrations
                 name: "GradeCurriculars");
 
             migrationBuilder.DropTable(
-                name: "MatriculaTurmas");
+                name: "MatriculaDisciplinas");
 
             migrationBuilder.DropTable(
                 name: "PreRequisitos");

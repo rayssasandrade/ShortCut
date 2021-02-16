@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SisGerenciador.src.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace SisGerenciador.src
 {
@@ -24,6 +26,10 @@ namespace SisGerenciador.src
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //services.AddRazorPages();
+
+            services.AddDbContext<MeuContexto>(options =>
+              options.UseSqlServer(Configuration.GetConnectionString("MeuContexto")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
