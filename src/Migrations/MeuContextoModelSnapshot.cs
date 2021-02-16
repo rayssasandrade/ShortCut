@@ -331,7 +331,7 @@ namespace SisGerenciador.Migrations
 
                     b.HasIndex("DisciplinaId");
 
-                    b.ToTable("MatriculaTurmas");
+                    b.ToTable("MatriculaDisciplinas");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.PeriodoCurricular", b =>
