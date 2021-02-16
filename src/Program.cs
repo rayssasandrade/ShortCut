@@ -7,7 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
-using SisGerenciador.Models;
+using SisGerenciador.src.Models;
+using SisGerenciador.src.Data;
 
 namespace SisGerenciador.src
 {
