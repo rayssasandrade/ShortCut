@@ -8,6 +8,7 @@ namespace SisGerenciador.src.Data
     {
         public MeuContexto(DbContextOptions<MeuContexto> options) : base(options)
         {
+
         }
 
         public DbSet<Aluno> Alunos { get; set; }
