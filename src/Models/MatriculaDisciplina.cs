@@ -13,7 +13,7 @@ namespace SisGerenciador.src.Models
 
         [Display(Name = "Status")]
         [Required(ErrorMessage = "Status é obrigatório")]
-        public bool status { get; set; }
+        public bool Status { get; set; }
 
         public Aluno Aluno { get; set; }
         public int AlunoId { get; set; }

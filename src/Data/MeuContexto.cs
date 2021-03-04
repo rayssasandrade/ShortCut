@@ -39,12 +39,12 @@ namespace SisGerenciador.src.Data
 
             modelBuilder.Entity<GradeCurricular>()
                 .HasOne(am => am.Curso)
-                .WithMany(a => a.GradesCurriculares)
+                .WithMany(a => a.GradeCurriculares)
                 .HasForeignKey(am => am.CursoId);
 
             modelBuilder.Entity<GradeCurricular>()
                 .HasOne(am => am.PeriodoCurricular)
-                .WithMany(m => m.GradesCurriculares)
+                .WithMany(m => m.GradeCurriculares)
                 .HasForeignKey(am => am.PeriodoCurricularId);
 
             modelBuilder.Entity<GradeCurricular>()
@@ -63,7 +63,7 @@ namespace SisGerenciador.src.Data
 
             modelBuilder.Entity<DisciplinaOfertada>()
                 .HasOne(at => at.PeriodoLetivo)
-                .WithMany(t => t.DisciplinasOfertadas)
+                .WithMany(t => t.DisciplinaOfertadas)
                 .HasForeignKey(at => at.PeriodoLetivoId);
 
             /*Relações muitos para muitos - PreRequisitos*/
@@ -160,8 +160,10 @@ namespace SisGerenciador.src.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(Configuration.GetConnectionString("MeuContexto"));
-            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;Password=P@ss;User ID =sa;Initial Catalog=Shortcut;Data Source=DESKTOP-ADA6836\\SQLEXPRESS");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;User ID=ITSOLVED;Initial Catalog=Shortcut;Data Source=RAYSSA\\SQLEXPRESS");
+            }
         }
     }
 }

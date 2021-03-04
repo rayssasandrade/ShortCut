@@ -35,7 +35,7 @@ namespace SisGerenciador.src.Models
         public Departamento Departamento { get; set; }
         public int DepartamentoId { get; set; }
 
-        public virtual ICollection<GradeCurricular> GradesCurriculares { get; set; }
+        public virtual ICollection<GradeCurricular> GradeCurriculares { get; set; }
     }
 }
 

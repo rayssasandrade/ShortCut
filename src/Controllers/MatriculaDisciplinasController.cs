@@ -59,7 +59,7 @@ namespace SisGerenciador.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,status,AlunoId,DisciplinaId")] MatriculaDisciplina matriculaDisciplina)
+        public async Task<IActionResult> Create([Bind("Id,Status,AlunoId,DisciplinaId")] MatriculaDisciplina matriculaDisciplina)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace SisGerenciador.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,status,AlunoId,DisciplinaId")] MatriculaDisciplina matriculaDisciplina)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Status,AlunoId,DisciplinaId")] MatriculaDisciplina matriculaDisciplina)
         {
             if (id != matriculaDisciplina.Id)
             {

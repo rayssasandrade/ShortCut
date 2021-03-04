@@ -28,6 +28,6 @@ namespace SisGerenciador.src.Models
         [Required(ErrorMessage = "Data de fim é obrigatória")]
         public DateTime DtFim { get; set; }
 
-        public virtual ICollection<DisciplinaOfertada> DisciplinasOfertadas { get; set; }
+        public virtual ICollection<DisciplinaOfertada> DisciplinaOfertadas { get; set; }
     }
 }

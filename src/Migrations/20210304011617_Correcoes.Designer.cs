@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SisGerenciador.src.Data;
 
 namespace SisGerenciador.Migrations
 {
     [DbContext(typeof(MeuContexto))]
-    partial class MeuContextoModelSnapshot : ModelSnapshot
+    [Migration("20210304011617_Correcoes")]
+    partial class Correcoes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -555,7 +557,7 @@ namespace SisGerenciador.Migrations
                         .IsRequired();
 
                     b.HasOne("SisGerenciador.src.Models.PeriodoLetivo", "PeriodoLetivo")
-                        .WithMany("DisciplinaOfertadas")
+                        .WithMany("DisciplinasOfertadas")
                         .HasForeignKey("PeriodoLetivoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -579,7 +581,7 @@ namespace SisGerenciador.Migrations
             modelBuilder.Entity("SisGerenciador.src.Models.GradeCurricular", b =>
                 {
                     b.HasOne("SisGerenciador.src.Models.Curso", "Curso")
-                        .WithMany("GradeCurriculares")
+                        .WithMany("GradesCurriculares")
                         .HasForeignKey("CursoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -591,7 +593,7 @@ namespace SisGerenciador.Migrations
                         .IsRequired();
 
                     b.HasOne("SisGerenciador.src.Models.PeriodoCurricular", "PeriodoCurricular")
-                        .WithMany("GradeCurriculares")
+                        .WithMany("GradesCurriculares")
                         .HasForeignKey("PeriodoCurricularId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -718,7 +720,7 @@ namespace SisGerenciador.Migrations
 
             modelBuilder.Entity("SisGerenciador.src.Models.Curso", b =>
                 {
-                    b.Navigation("GradeCurriculares");
+                    b.Navigation("GradesCurriculares");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.Departamento", b =>
@@ -770,12 +772,12 @@ namespace SisGerenciador.Migrations
 
             modelBuilder.Entity("SisGerenciador.src.Models.PeriodoCurricular", b =>
                 {
-                    b.Navigation("GradeCurriculares");
+                    b.Navigation("GradesCurriculares");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.PeriodoLetivo", b =>
                 {
-                    b.Navigation("DisciplinaOfertadas");
+                    b.Navigation("DisciplinasOfertadas");
                 });
 
             modelBuilder.Entity("SisGerenciador.src.Models.Turma", b =>

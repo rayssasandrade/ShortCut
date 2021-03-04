@@ -15,6 +15,6 @@ namespace SisGerenciador.src.Models
         [Required(ErrorMessage = "O número ordinal do período curricular é obrigatório")]
         public int NumOrdinal { get; set; }
 
-        public virtual ICollection<GradeCurricular> GradesCurriculares { get; set; }
+        public virtual ICollection<GradeCurricular> GradeCurriculares { get; set; }
     }
 }
