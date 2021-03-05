@@ -76,6 +76,20 @@
 - Documentação sobre [Diretrizes de design de estrutura] 
 - [A collection of awesome **.NET CORE** libraries, tools, frameworks, and software](https://github.com/thangchung/awesome-dotnet-core)
 - [A collection of awesome **.NET** libraries, tools, frameworks, and software](https://github.com/quozd/awesome-dotnet) - Referência, pois é para .NET e não .NET CORE
+- Banco de dados
+  - [Sqlserver e docker: um guia instantâneo](sqlserver_e_docker.md)
+  - *Migrations*
+    - [Visão geral](https://docs.microsoft.com/pt-br/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli)
+    - [Exemplo: aplicação de uma *migration*](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/migrations?view=aspnetcore-3.1)
+  - Carga de dados iniciais (*seed data*)
+    - [Data seeding]
+    - [migrations/seeding](https://www.learnentityframeworkcore.com/migrations/seeding)
+- Globalização
+  - [Usar (",") como separador decimal](https://github.com/dotnet/AspNetCore.Docs/issues/4076#issuecomment-326590420)
+  - [Vários idiomas](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/localization?view=aspnetcore-5.0)
+- Tela
+  - [Como filtrar por categoria](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mvc-app/search?view=aspnetcore-5.0)
+  - [Gerenciamento de estado e sessão](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/app-state?view=aspnetcore-5.0)
 
 ### Gerenciar seu trabalho no GitHub
 
@@ -91,8 +105,8 @@ O github contém várias ferramentas que permitem o gerenciamento projeto, promo
 Data | Descrição
 :---:|:---
 14/01/2021 | Definição do projeto a ser executado
-??/02/2020 | Modelo implementado no EF Core
-??/02/2020 | Aplicação que permite a carga incial/teste do modelo implementado com EF Core
+??/02/2020 | [Modelo implementado](https://docs.microsoft.com/pt-br/ef/core/modeling/) no EF Core
+??/02/2020 | Aplicação que permite a [carga incial/teste][Data seeding] do modelo implementado com EF Core
 ??/03/2020 | Entrega de [protótipos](prototipos/prototipos.md) das principais telas do sistema proposto (e que atendam aos itens descritos no REQUISITOS NÃO FUNCIONAIS)
 
 ## Project status
@@ -100,3 +114,4 @@ Este projeto é um template para a definição da avaliação da disciplina prog
 
 
 [Diretrizes de design de estrutura]: https://docs.microsoft.com/pt-br/dotnet/standard/design-guidelines/
+[Data seeding]: https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding
