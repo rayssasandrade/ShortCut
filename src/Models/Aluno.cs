@@ -14,7 +14,6 @@ namespace SisGerenciador.src.Models
         [Display(Name = "CPF")]
         [StringLength(11)]
         [Required(ErrorMessage = "CPF é obrigatório", AllowEmptyStrings = false)]
-        [CustomValidation.CustomValidationCPF(ErrorMessage = "CPF inválido")]
         public string CPF { get; set; }
 
         [Display(Name = "Nome")]
