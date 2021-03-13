@@ -5,6 +5,18 @@ for details on configuring this project to bundle and minify static web assets. 
     font-size: 14px;
 }
 
+
+::-webkit-scrollbar-track {
+    background-color: #61978c;
+  }
+::-webkit-scrollbar {
+    width: 6px;
+    background: #45736A;
+}
+    ::-webkit-scrollbar-thumb {
+    background: #29453F;
+}
+
 /*
  * General
  */
@@ -24,18 +36,21 @@ ul {
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 .content {
     display: flex;
     flex-direction: row;
 }
-    .header {
-        width: 20%;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-    }
+.header {
+    width: 20%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background: #45736A;
+}
         .header .logo {
             display: flex;
         }
@@ -72,12 +87,12 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background
+Provide sufficient contrast against white background
 
 a {
-  color: #0366d6;
+    color: #0366d6;
+    text-decoration: none;
 }
-*/
 
 
 .btn-primary {

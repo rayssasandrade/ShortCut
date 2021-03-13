@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using SisGerenciador.src.Data;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation.AspNetCore;
 
 namespace SisGerenciador.src
 {
@@ -30,6 +31,10 @@ namespace SisGerenciador.src
 
             services.AddDbContext<MeuContexto>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("MeuContexto")));
+
+            services.AddMvc()
+                .AddFluentValidation(fvc =>
+                            fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
