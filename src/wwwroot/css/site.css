@@ -42,6 +42,10 @@ body {
 .content {
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    height: 100vh;
 }
 .header {
     width: 20%;
@@ -67,11 +71,12 @@ body {
                 padding: 10px 20px;               
                 text-align: left;
             }
-            
+
 
 .content-page {
-    padding: 50px;
+    padding: 3%;
     width: 80%;
+    overflow: auto;
 }
 
 .header a { color: white; }
@@ -90,7 +95,7 @@ a.navbar-brand {
 Provide sufficient contrast against white background
 
 a {
-    color: #0366d6;
+    color: #F2B035;
     text-decoration: none;
 }
 
