@@ -20,9 +20,7 @@ namespace SisGerenciador.src.Data
                 {
                     var departamentos = new List<Departamento>
                     {
-                        new Departamento { Sigla = "DP1", Descricao = "Descrição do Departamento1"},
-                        new Departamento { Sigla = "DP2", Descricao = "Descrição do Departamento2"},
-                        new Departamento { Sigla = "DP3", Descricao = "Descrição do Departamento3"}
+                        new Departamento { Sigla = "BSI", Descricao = "Bacharelado de Sistema de Informação"}
                     };
 
                     context.Departamentos.AddRange(departamentos);
@@ -32,7 +30,7 @@ namespace SisGerenciador.src.Data
                 {
                     var instituicoes = new List<Instituicao>
                     {
-                        new Instituicao { Sigla = "IFS", Descricao = "Instituto Federal de Ciência e Tecnologia de Sergipe1"},
+                        new Instituicao { Sigla = "IFS", Descricao = "Instituto Federal de Ciência e Tecnologia de Sergipe"},
                         new Instituicao { Sigla = "UFS", Descricao = "Universidade Federal de Sergipe"}
                     };
 

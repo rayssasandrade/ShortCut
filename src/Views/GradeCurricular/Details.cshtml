@@ -10,33 +10,33 @@
     <h4>GradeCurricular</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class = "form-group col-sm-2">
             @Html.DisplayNameFor(model => model.Descricao)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = " form-group col-sm-8">
             @Html.DisplayFor(model => model.Descricao)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "form-group col-sm-2">
             @Html.DisplayNameFor(model => model.Curso)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = " form-group col-sm-8">
             @Html.DisplayFor(model => model.Curso.Descricao)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "form-group col-sm-2">
             @Html.DisplayNameFor(model => model.PeriodoCurricular)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = " form-group col-sm-8">
             @Html.DisplayFor(model => model.PeriodoCurricular.Id)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "form-group col-sm-2">
             @Html.DisplayNameFor(model => model.Disciplina)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = " form-group col-sm-8">
             @Html.DisplayFor(model => model.Disciplina.Descricao)
         </dd>
     </dl>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar a lista</a>
 </div>

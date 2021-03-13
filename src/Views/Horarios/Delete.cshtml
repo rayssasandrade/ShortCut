@@ -11,22 +11,22 @@
     <h4>Horario</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class = "form-group col-sm-2">
             @Html.DisplayNameFor(model => model.DiaSemana)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = " form-group col-sm-8">
             @Html.DisplayFor(model => model.DiaSemana)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "form-group col-sm-2">
             @Html.DisplayNameFor(model => model.Turno)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = " form-group col-sm-8">
             @Html.DisplayFor(model => model.Turno)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "form-group col-sm-2">
             @Html.DisplayNameFor(model => model.HoraAula)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = " form-group col-sm-8">
             @Html.DisplayFor(model => model.HoraAula.Descricao)
         </dd class>
     </dl>
@@ -34,6 +34,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">Voltar a lista</a>
     </form>
 </div>
