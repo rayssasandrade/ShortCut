@@ -31,10 +31,14 @@
                 @Html.DisplayFor(modelItem => item.Descricao)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DtInicio)
+                @*Html.DisplayFor(modelItem => item.DtInicio)*@
+
+                @string.Format("{0:HH:mm}", item.DtInicio)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DtFim)
+                @*Html.DisplayFor(modelItem => item.DtFim)*@
+
+                @string.Format("{0:HH:mm}", item.DtFim)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id"><ion-icon name="create-sharp"></ion-icon></a> |
