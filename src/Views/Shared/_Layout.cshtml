@@ -4,98 +4,103 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ShortCut</title>
-    <!--z
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="https://www.flaticon.com/collections/MTc5NjI0MDI=">
-</head>
-    <body>
-        <div class="content">
-            <!--Cabecalho-->
-            <header class="header">
-                <!--class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3"-->
-                <nav>
-                    <!--container-->
-                    <div class="logo">
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                            <img id="nomelogo" src="https://i.postimg.cc/t4756FHv/shortcut.png" alt="shortcut">
-                        </a>
-                    </div>
-                    <!--Menu-->
-                    <div class="menu">
-                        <ul class="ul">
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Alunos" asp-action="Index"><div>Alunos</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Cursos" asp-action="Index"><div>Cursos</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Departamentos" asp-action="Index"><div>Departamentos</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="DisciplinaOfertadas" asp-action="Index"><div>Disciplias Ofertadas</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Disciplinas" asp-action="Index"><div>Disciplinas</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Docentes" asp-action="Index"><div>Docentes</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="GradeCurricular" asp-action="Index"><div>Grade Curricular</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="HoraAula" asp-action="Index"><div>Hora Aula</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Horarios" asp-action="Index"><div>Horários</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Instituicoes" asp-action="Index"><div>Instituicões</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="MatriculaDisciplinas" asp-action="Index"><div>Matricula Disciplinas</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="PeriodoCurriculares" asp-action="Index"><div>Períodos Curriculares</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="PeriodoLetivos" asp-action="Index"><div>Períodos Letivos</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="PreRequisitos" asp-action="Index"><div>Pré-requisitos</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Restricoes" asp-action="Index"><div>Restricões</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="TurmaHorarios" asp-action="Index"><div>Turma Horários</div></a>
-                            </li>
-                            <li class="li">
-                                <a class="navbar-brand" asp-area="" asp-controller="Turmas" asp-action="Index"><div>Turmas</div></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <!--container-->
-            <div class="content-page">
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
-            </div>
-        </div>
 
-        <!--<footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2021 - ShortCut - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>-->
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!--<link rel="stylesheet" href="https://www.flaticon.com/collections/MTc5NjI0MDI=">-->
+</head>
+<body>
+    <div class="content">
+        <div class="icon-menu">
+            <label for="ckb-menu-id"><img src="~/imgs/menu.png" alt="Alternate Text" /></label>
+        </div>
+        <!--Cabecalho-->
+        <input type="checkbox" id="ckb-menu-id" class="ckb-menu" />
+        <header class="header">
+            <!--class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3"-->
+            <nav>
+                <!--container-->
+                <div class="logo">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img id="nomelogo" src="https://i.postimg.cc/t4756FHv/shortcut.png" alt="shortcut">
+                    </a>
+                </div>
+                <!--Menu-->
+                <div class="menu">
+                    <ul class="ul">
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Alunos" asp-action="Index"><div>Alunos</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Cursos" asp-action="Index"><div>Cursos</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Departamentos" asp-action="Index"><div>Departamentos</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="DisciplinaOfertadas" asp-action="Index"><div>Disciplias Ofertadas</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Disciplinas" asp-action="Index"><div>Disciplinas</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Docentes" asp-action="Index"><div>Docentes</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="GradeCurricular" asp-action="Index"><div>Grade Curricular</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="HoraAula" asp-action="Index"><div>Hora Aula</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Horarios" asp-action="Index"><div>Horários</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Instituicoes" asp-action="Index"><div>Instituicões</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="MatriculaDisciplinas" asp-action="Index"><div>Matricula Disciplinas</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="PeriodoCurriculares" asp-action="Index"><div>Períodos Curriculares</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="PeriodoLetivos" asp-action="Index"><div>Períodos Letivos</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="PreRequisitos" asp-action="Index"><div>Pré-requisitos</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Restricoes" asp-action="Index"><div>Restricões</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="TurmaHorarios" asp-action="Index"><div>Turma Horários</div></a>
+                        </li>
+                        <li class="li">
+                            <a class="navbar-brand" asp-area="" asp-controller="Turmas" asp-action="Index"><div>Turmas</div></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--container-->
+        <div class="content-page">
+            <!--class="pb-3"-->
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <!--<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ShortCut - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>-->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
-    </body>
+</body>
 </html>
