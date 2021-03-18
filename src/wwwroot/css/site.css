@@ -36,7 +36,9 @@ ul {
 
 body {
     margin: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    background: url('../imgs/background.jpg') top center no-repeat;
+    background-size: cover;
 }
 
 .content {
