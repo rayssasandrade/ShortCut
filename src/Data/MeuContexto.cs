@@ -33,7 +33,7 @@ namespace SisGerenciador.src.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            /*Relações muitos para muitos - Grade Curricular*/
+            /*Relaï¿½ï¿½es muitos para muitos - Grade Curricular*/
             modelBuilder.Entity<GradeCurricular>()
                 .HasKey(m => new { m.Id });
 
@@ -52,7 +52,7 @@ namespace SisGerenciador.src.Data
                 .WithMany(m => m.GradeCurriculares)
                 .HasForeignKey(am => am.DisciplinaId);
 
-            /*Relações muitos para muitos - DisciplinaOfertadas*/
+            /*Relaï¿½ï¿½es muitos para muitos - DisciplinaOfertadas*/
             modelBuilder.Entity<DisciplinaOfertada>()
                 .HasKey(t => new { t.Id });
 
@@ -66,7 +66,7 @@ namespace SisGerenciador.src.Data
                 .WithMany(t => t.DisciplinaOfertadas)
                 .HasForeignKey(at => at.PeriodoLetivoId);
 
-            /*Relações muitos para muitos - PreRequisitos*/
+            /*Relaï¿½ï¿½es muitos para muitos - PreRequisitos*/
             modelBuilder.Entity<PreRequisito>()
                 .HasKey(m => new { m.Id });
 
@@ -85,7 +85,7 @@ namespace SisGerenciador.src.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
 
-            /*Relações muitos para muitos - Turma*/
+            /*Relaï¿½ï¿½es muitos para muitos - Turma*/
             modelBuilder.Entity<Turma>()
                .HasKey(m => new { m.Id });
 
@@ -99,7 +99,7 @@ namespace SisGerenciador.src.Data
                  .WithMany(p => p.Turmas)
                  .HasForeignKey(pm => pm.DocenteId);
 
-            /*Relações muitos para muitos - TurmaHorario*/
+            /*Relaï¿½ï¿½es muitos para muitos - TurmaHorario*/
             modelBuilder.Entity<TurmaHorario>()
                .HasKey(a => new { a.Id });
 
@@ -113,7 +113,7 @@ namespace SisGerenciador.src.Data
                 .WithMany(p => p.TurmaHorarios)
                 .HasForeignKey(pa => pa.HorarioId);
 
-            /*Relações muitos para muitos - Restricao*/
+            /*Relaï¿½ï¿½es muitos para muitos - Restricao*/
             modelBuilder.Entity<Restricao>()
                .HasKey(a => new { a.Id });
 
@@ -127,7 +127,7 @@ namespace SisGerenciador.src.Data
                 .WithMany(p => p.Restricoes)
                 .HasForeignKey(pa => pa.AlunoId);
 
-            /*Relações muitos para muitos - MatriculaDisciplina*/
+            /*Relaï¿½ï¿½es muitos para muitos - MatriculaDisciplina*/
             modelBuilder.Entity<MatriculaDisciplina>()
                .HasKey(a => new { a.Id });
 
@@ -141,7 +141,7 @@ namespace SisGerenciador.src.Data
                 .WithMany(p => p.MatriculaDisciplinas)
                 .HasForeignKey(pa => pa.DisciplinaId);
 
-            ///*Relações muitos para muitos - SugestaoMatricula*/
+            ///*Relaï¿½ï¿½es muitos para muitos - SugestaoMatricula*/
             //modelBuilder.Entity<SugestaoMatricula>()
             //   .HasKey(a => new { a.Id });
 
