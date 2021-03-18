@@ -21,15 +21,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.QtdPeriodo)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LimiteQtdPeriodoCurricular)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Instituicao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Departamento)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -44,15 +35,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.QtdPeriodo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LimiteQtdPeriodoCurricular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Instituicao.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Departamento.Descricao)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id"><ion-icon name="create-sharp"></ion-icon></a> |
