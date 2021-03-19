@@ -5,15 +5,12 @@ using System;
 namespace SisGerenciador.Models.Validations
 {
    
-    public class AlunoValidator : AbstractValidator<Aluno>
+    public class DocenteValidator : AbstractValidator<Docente>
     {
-        public AlunoValidator()
+        public DocenteValidator()
         {
             RuleFor(c => c.CPF)
             .Must(IsCpf).WithMessage("CPF inválido!");
-
-            RuleFor(c => c.DtNasc)
-            .Must(MenorQueHoje).WithMessage("Data inválida");
 
             RuleFor(c => c.DtMatricula)
             .Must(MenorQueHoje).WithMessage("Data inválida");

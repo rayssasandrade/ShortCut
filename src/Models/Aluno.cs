@@ -25,7 +25,6 @@ namespace SisGerenciador.src.Models
         [Display(Name = "Email")]
         [StringLength(500)]
         [DataType(DataType.EmailAddress)]
-        [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Informe um email válido")]
         public string Email { get; set; }
 
         [Display(Name = "Telefone")]
