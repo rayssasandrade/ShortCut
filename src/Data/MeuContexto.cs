@@ -162,7 +162,7 @@ namespace SisGerenciador.src.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;User ID=ITSOLVED;Initial Catalog=Shortcut;Data Source=RAYSSA\\SQLEXPRESS");
+                optionsBuilder.UseSqlServer("Integrated Security=SSPI; Password=123; User ID=sa; Initial Catalog=Shortcut; Data Source=DESKTOP-T2I87RH\\SQLEXPRESS");
             }
         }
     }
