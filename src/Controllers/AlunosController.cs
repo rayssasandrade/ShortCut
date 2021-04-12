@@ -25,7 +25,7 @@ namespace SisGerenciador.Views
         {
             var meuContexto = _context.Alunos.Include(a => a.Instituicao);
 
-            var alunos = from s in _context.Alunos
+            var alunos = from s in meuContexto
                          select s;
 
             if (!String.IsNullOrEmpty(searchString))
