@@ -10,11 +10,6 @@ namespace SisGerenciador.src.Models
 {
     public class Usuario : IdentityUser
     {
-        [NotMapped]
-        public bool IsAdmin { get; set; }
-
-        [Required(ErrorMessage = "Nome do usuario é obrigatorio.")]
-        [MinLength(6, ErrorMessage = "Nome inválido")]
-        public string Nome { get; set; }
+        public bool isAdmin { get; set; }
     }
 }
